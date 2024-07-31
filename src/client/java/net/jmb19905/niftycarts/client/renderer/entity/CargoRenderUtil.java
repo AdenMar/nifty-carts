@@ -13,8 +13,8 @@ public class CargoRenderUtil {
 
     public static void renderPainting(final PaintingVariant painting, final PoseStack stack, final VertexConsumer buf, final int packedLight) {
         final PaintingTextureManager uploader = Minecraft.getInstance().getPaintingTextures();
-        final int width = painting.getWidth();
-        final int height = painting.getHeight();
+        final int width = painting.width();
+        final int height = painting.height();
         final TextureAtlasSprite art = uploader.get(painting);
         final TextureAtlasSprite back = uploader.getBackSprite();
         final Matrix4f model = stack.last().pose();
